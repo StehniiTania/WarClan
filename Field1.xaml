@@ -1,0 +1,124 @@
+﻿<Window x:Class="WarClan.Field1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WarClan"
+        mc:Ignorable="d"
+        Title="Field1" Height="900" Width="1200" x:Name="Window2">
+    <Window.Resources>
+        <Style TargetType="Border">
+            <Setter Property="Background" Value="Navy"/>           
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="CornerRadius" Value="20"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="Navy"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontSize" Value="20"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+        </Style>
+    </Window.Resources>
+    <Grid>
+
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition />
+            <ColumnDefinition Width="50"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition />
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="MainField" Grid.Column="1" Grid.Row="1">
+                <Grid.Background>
+                    <ImageBrush ImageSource="Picture\Stars.jpg"></ImageBrush>
+                </Grid.Background>            
+        </Grid>
+
+        <Grid Grid.Row="0" Grid.Column="1" Background="Beige">
+            <UniformGrid Columns="9">
+                <Button x:Name="Wa1_Forward" Content="Forward" Click="CommandClan_Click"/>
+                <Button x:Name="Wa1_Back" Content="Back" Click="CommandClan_Click"/>
+                <Button x:Name="Wa1_Attack" Content="Attack" Click="CommandClan_Click"/>
+                <Button x:Name="Dr1_Forward" Content="Forward" Click="CommandClan_Click"/>
+                <Button x:Name="Dr1_Back" Content="Back" Click="CommandClan_Click"/>
+                <Button x:Name="Dr1_Attack" Content="Attack" Click="CommandClan_Click"/>
+                <Button x:Name="Ro1_Forward" Content="Forward" Click="CommandClan_Click"/>
+                <Button x:Name="Ro1_Back" Content="Back" Click="CommandClan_Click"/>
+                <Button x:Name="Ro1_Attack" Content="Attack" Click="CommandClan_Click"/>
+            </UniformGrid>            
+        </Grid>
+
+
+        <Grid Grid.Row="2" Grid.Column="1" Background="Beige">
+            <UniformGrid Columns="9">
+                <Button x:Name="Wa2_Forward" Content="Forward" Click="CommandClan_Click"/>
+                <Button x:Name="Wa2_Back" Content="Back" Click="CommandClan_Click"/>
+                <Button x:Name="Wa2_Attack" Content="Attack" Click="CommandClan_Click"/>
+                <Button x:Name="Dr2_Forward" Content="Forward" Click="CommandClan_Click"/>
+                <Button x:Name="Dr2_Back" Content="Back" Click="CommandClan_Click"/>
+                <Button x:Name="Dr2_Attack" Content="Attack" Click="CommandClan_Click"/>
+                <Button x:Name="Ro2_Forward" Content="Forward" Click="CommandClan_Click"/>
+                <Button x:Name="Ro2_Back" Content="Back" Click="CommandClan_Click"/>
+                <Button x:Name="Ro2_Attack" Content="Attack" Click="CommandClan_Click"/>
+            </UniformGrid>
+        </Grid>
+
+
+
+        <Grid Grid.Row="1" Grid.Column="0" Background="Beige">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="0">
+                <Button FontSize="40" ToolTip="Update" Click="Update_Click">&#128472;</Button>
+            </Border>
+
+            <Border Grid.Row="1">
+                <Button x:Name="IText" Click="Interface_Click" ToolTip="Interface: text">Text</Button>
+            </Border>
+
+            <Border Grid.Row="2">
+                <Button x:Name="IPicture" Click="Interface_Click" ToolTip="Interface: pictures" FontSize="18">Picture</Button>
+            </Border>
+
+            <Border Grid.Row="3">
+                <Button x:Name="ITextPicture" Click="Interface_Click"  ToolTip="Interface: pictures + text">
+                    <TextBlock Text="Text + Picture" FontSize="18" TextWrapping="Wrap"/>
+                </Button>
+            </Border>
+
+            <Border Grid.Row="4">
+                <Button ToolTip="Save the game" Click="Save_Click">Save</Button>
+            </Border>
+
+            <Border Grid.Row="5">
+                <Button ToolTip="Restore saved game" FontSize="18" Click="Restore_Click">Restore</Button>
+            </Border>
+
+            <Border Grid.Row="6">
+                <Button Click="Exit_Click">Exit</Button>
+            </Border>
+
+        </Grid>
+
+        <Grid Grid.Row="1" Grid.Column="3" Background="Beige"/>    
+    </Grid>
+</Window>
